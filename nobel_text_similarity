@@ -1,0 +1,33 @@
+from mediawiki import MediaWiki
+from thefuzz import fuzz
+
+
+def text_similarity(text1, text2):
+    """Computes and prints similarity scores between two text strings using different metrics from thefuzz library."""
+
+    print("fuzz.ratio:", fuzz.ratio(text1, text2))
+    # Computes the simple Levenshtein distance-based similarity, which measures the number of character changes needed.
+
+    print("fuzz.partial_ratio:", fuzz.partial_ratio(text1, text2))
+    # Calculates the similarity based on the best matching substring, which is useful when comparing texts of different lengths.
+
+    print("fuzz.token_sort_ratio:", fuzz.token_sort_ratio(text1, text2))
+    # Sorts the words in each text alphabetically before comparing, which helps mitigate differences caused by word order. Higher numbers (closer to 100) indicate more similarity, while lower numbers suggest less similarity.
+
+
+def main():
+    wikipedia = MediaWiki()
+    nobel = wikipedia.page("Nobel Prize")
+    abel = wikipedia.page("Abel Prize")
+
+    text1 = nobel.content
+    text2 = abel.content
+
+    print(
+        "\nComparing the the content from the wikedia pages about Nobel Prize and Abel Prize:"
+    )
+    text_similarity(text1, text2)
+
+
+if __name__ == "__main__":
+    main()
