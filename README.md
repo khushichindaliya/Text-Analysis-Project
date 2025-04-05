@@ -4,7 +4,7 @@ Please read the [instructions](instructions.md).
 
 Project Overview:
 
-In this project, I explored NLP techniques using publicly available textual data from the Wikipedia page on the Nobel Prize. I used the MediaWiki API to extract the page content and applied various analytical methods to uncover insights. These included word frequency analysis to identify commonly used terms, sentiment analysis using NLTK’s VADER to assess the emotional tone of the content, text similarity comparison, and multidimensional scaling (MDS) to visually cluster related Nobel Prize pages. Additionally, I performed topic modeling using scikit-learn’s Latent Dirichlet Allocation (LDA) to discover underlying themes within the text. 
+In this project, I explored NLP techniques using publicly available textual data from the Wikipedia page on the Nobel Prize. I used the MediaWiki API to extract the page content and applied various analytical methods to uncover insights. These included word frequency analysis to identify commonly used terms, sentiment analysis using NLTK’s VADER to assess the emotional tone of the content, text similarity comparison, and multidimensional scaling (MDS) to visually cluster related Nobel Prize pages. Additionally, I performed topic modeling using scikit-learn’s Latent Dirichlet Allocation (LDA) to discover underlying themes within the text. Toward the end of the project, I also integrated OpenAI’s GPT model to allow users to ask natural language questions about the Nobel Prize content, making the analysis more interactive and user-driven.
 
 Implementation:
 
